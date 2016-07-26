@@ -22,4 +22,6 @@ if [ ! -f /usr/bin/ansible ]; then
   # Remove downloaded package
   rm -f /tmp/ansible.deb
 
+  ansible-galaxy install -r /vagrant/ansible/requirements.yml -p /vagrant/ansible/roles/
+
 fi
