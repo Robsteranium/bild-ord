@@ -13,6 +13,7 @@
      (include-css "/css/base.css")
      (include-css
       (str "/css/main.css?"
+           "_version=placeholder"
            ))]
     [:body
      (when-let [class (:class options)]
@@ -20,6 +21,7 @@
      body
      (include-js
       (str "/js/main.js?"
+           "_version=placeholder"
            ))
      (when (:cljs-main options)
        [:script (str (:cljs-main options) "();")])])))
@@ -40,3 +42,4 @@
 (defn set-session-id
   [request id]
   (assoc-in request [:session :identity] id))
+
